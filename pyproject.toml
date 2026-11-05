@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "egs-audit"
+version = "0.1.0"
+description = "Independent hand-check and validation toolkit for CO2-EGS simulators and techno-economic analysis"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.24", "CoolProp>=6.4"]
+
+[project.optional-dependencies]
+test = ["pytest>=7"]
+
+[tool.setuptools]
+packages = ["egs_audit"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
